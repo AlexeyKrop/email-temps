@@ -1,0 +1,10 @@
+extends layouts/base
+include ./mixins/button
+block content
+  include layouts/header
+  tr
+     td(style="height: auto; background-color: #ffffff; padding: 40px; vertical-align: top;")
+            h2(style="margin: 0; padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") You have been invited to join!
+            p(style="margin: 0; padding: 0; font-size: 20px; line-height: 30px; margin-bottom: 40px;") #{programCompanyName} has invited you to join the team. To gain access, please click the link below:
+            +button(applicationInviteLink, "Join team", primaryColor, "173px")
+  include layouts/footer
