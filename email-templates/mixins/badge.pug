@@ -1,0 +1,8 @@
+mixin badge(name = "Risk", riskNumber, color, width = '170px', height = '40px')
+  include ../variables/variables.pug
+  div(style=`display: inline-block; border: 1px solid ${color || bsrPrimaryColor}; border-radius: 8px;width: ${width}; height: ${height}; ; line-height: ${height}; text-align: center;`)
+    span(style=`display: inline-block; width: 3px; height: 65%; background-color: ${color || bsrPrimaryColor}; vertical-align: middle; margin-left: -20px`)
+    span(style="color: #121414; font-size: 1rem; font-weight: 500; margin-left: 10px")
+      | #{name} #
+    span(style=`color: ${color || bsrPrimaryColor}; text-decoration: none; font-size: 1rem; font-weight: 700; margin-left: 2px;`)
+      | #{riskNumber}

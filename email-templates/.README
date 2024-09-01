@@ -14,3 +14,6 @@ variables:
         - verificationCode - code we display on verification screen
     application invite:
         - applicationInviteLink - application invite link.
+    application_submitted_insured:
+        - riskNumber - risk number.
+        - insuredName - insured name.

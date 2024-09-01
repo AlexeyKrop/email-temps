@@ -1,0 +1,13 @@
+extends layouts/base
+include ./mixins/button
+include ./mixins/risk_info
+block content
+  include layouts/header
+  tr
+     td(style="height: auto; background-color: #ffffff; padding: 40px; vertical-align: top;")
+            h2(style="margin: 0; padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") Application Received!
+            p(style="margin: 0; padding: 0; font-size: 20px; line-height: 30px; margin-bottom: 40px;") Thank you for submitting your application.
+            p(style="margin: 0; padding: 0; font-size: 20px; line-height: 30px; margin-bottom: 40px;") We are reviewing and we will contact you if we have any questions.
+            +riskInfo(insuredName, riskNumber)
+            +button(applicationInviteLink, "View risk", primaryColor, "161px")
+  include layouts/footer
