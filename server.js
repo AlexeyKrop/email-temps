@@ -42,6 +42,13 @@ const templates = [
       applicationInviteLink: "https://www.unisender.com/ru/blog/kak-sverstat-pismo-instruktsiya-dlya-chaynikov/",
     },
   },
+  {
+    filename: "program_invite",
+    templatePath: "./email-templates/program_invite.pug",
+    templateData: {
+      applicationInviteLink: "https://pugjs.org/language/mixins.html",
+    },
+  },
 ];
 
 templates.forEach((template) => {
