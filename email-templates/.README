@@ -1,0 +1,16 @@
+variables:
+    common:
+        - bsrLogo - BlackShield main logo
+        - producerLogo - producer logo
+        - primaryColor - primary program color
+        - termsOfUseLink - href for terms of use link
+        - privacyPolicyLink - href for privacy policy link
+        - blackShieldPromoLink - link for black shield promo site
+        - programCompanyName - name of program company
+        - programCompanyAddress - address of program company
+        - template - light or dark theme. possible options: with_margin / with_margin_light
+
+    verification code:
+        - verificationCode - code we display on verification screen
+    application invite:
+        - applicationInviteLink - application invite link.

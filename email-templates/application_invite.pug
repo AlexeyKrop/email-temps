@@ -1,0 +1,10 @@
+extends layouts/base
+
+block content
+  include layouts/header
+  tr
+     td(style="height: auto; background-color: #ffffff; padding: 40px; vertical-align: top;")
+            h2(style="margin: 0; padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") Let's get started!
+            p(style="margin: 0; padding: 0; font-size: 20px; line-height: 30px; margin-bottom: 40px;") #{programCompanyName} has sent you an application. Please click the link below to log in and to get started.
+            a(href=applicationInviteLink target="_blank" style=`display: inline-block; background-color: ${primaryColor}; color: #ffffff; width: 325px; height: 48px; line-height: 48px; text-align: center; border-radius: 24px; font-size: 1.125rem; font-weight: 600; cursor: pointer; text-decoration: none;`) Take me to the application
+  include layouts/footer

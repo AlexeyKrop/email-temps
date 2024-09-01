@@ -1,0 +1,27 @@
+include ../variables/variables.pug
+tr
+    td(style="vertical-align: bottom")
+        if !hideFooterInfo
+            div(style=`height: 180px; background-color: ${template === 'with_margin_light' ? '#F2F2F2' : '#202124'};`)
+                div(style="padding: 40px 40px 0 40px;margin-bottom: 40px;")
+                    img(src=producerLogo alt="Logo" title="Logo" width="138" height="42" style="display:block")
+                    p(style=`color:${template === 'with_margin_light' ? '#1A1A1A' : '#bcbcbd'}; margin: 0; padding: 0; font-size: 12px; line-height: 17px; margin-top: 15px; margin-bottom: 12px;`) Copyright &copy; #{new Date().getFullYear()} #{programCompanyName}
+                    p(style=`color:${template === 'with_margin_light' ? '#1A1A1A' : '#bcbcbd'}; margin: 0; padding: 0; font-size: 12px; line-height: 17px;`) #{programCompanyAddress}
+        div(style="background-color: #2b2c2f; padding: 12px 40px;")
+            table(style="width: 100%")
+                tr
+                    td(style="width: 50%")
+                        table(style="width: 100%")
+                            tr
+                                td(style="width: 50%")
+                                    a(href=termsOfUseLink target="_blank" style=`color: ${primaryColor || bsrPrimaryColor}; font-size: 12px; line-height: 17px; font-weight: 600; text-decoration: none;`) Terms of use
+                                td(style="width: 50%")
+                                    a(href=privacyPolicyLink target="_blank" style=`color: ${primaryColor || bsrPrimaryColor}; font-size: 12px; line-height: 17px; font-weight: 600; text-decoration: none;`) Privacy policy
+                        td(style="width: 50%")
+                            table(style="width: 100%")
+                                tr
+                                    td(style="text-align: right; padding-right: 8px; width: 100%;")
+                                        div(style="color: #bdbdbd; font-size: 11px; line-height: 15px;") Powered by
+                                    td(style="text-align: right;")
+                                        a(href=blackShieldPromoLink target="_blank")
+                                            img(src=bsrLogo alt="Blackshield Logo" title="Blackshield Logo" width="105" height="24" style="display:block")
