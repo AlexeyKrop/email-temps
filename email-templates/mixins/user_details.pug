@@ -1,0 +1,13 @@
+mixin userDetails(userDetails = {})
+    if Object.keys(userDetails).length > 0 || coverages.length > 0
+        span(style=`display: block; height: 4px; background-color: ${primaryColor}; opacity: .3; margin-top: 24px;`)
+        table(style="border-collapse: collapse; margin-top: 24px; width: 100%")
+            tr(style="height: 40px; border-bottom: 1px solid rgba(26, 26, 26, .1); vertical-align: middle")
+                td(style="color: #2A2A2A; font-size: 0.875rem; text-align: left;") Email address:
+                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{userDetails.email}
+            tr(style="height: 40px; border-bottom: 1px solid rgba(26, 26, 26, .1); vertical-align: middle")
+                td(style="color: #2A2A2A; font-size: 0.875rem; text-align: left;") Phone number:
+                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{userDetails.phone}
+            tr(style="height: 40px; vertical-align: middle")
+                td(style="color: #2A2A2A; font-size: 0.875rem; margin-bottom: 25px; text-align: left;") Requested effective date:
+                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{userDetails.effectiveDate}

@@ -1,0 +1,20 @@
+extends layouts/base
+include ./mixins/index.pug
+block content
+  include layouts/header
+  include ./variables/variables.pug
+  tr
+     td
+        h2(style="padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") Application Received!
+        +statusBanner(applicationReceivedBannerBackgroundColor, riskStatus, bannerLogo)
+        p(style="padding: 0; font-size: 20px; line-height: 30px; margin-bottom: 40px; margin-top: 40px;") An application is now 
+          span(style="font-weight: 600") #{riskStatus}
+        include layouts/widget
+          block widget_content
+            +riskInfo(insuredName, riskNumber)
+            if Object.keys(userDetails).length > 0
+              +userDetails(userDetails)
+            if coverages.length > 0
+              +coverages(coverages)
+        +button(applicationInviteLink, "View risk", primaryColor, "161px")
+  include layouts/footer

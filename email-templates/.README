@@ -15,5 +15,9 @@ variables:
     application invite:
         - applicationInviteLink - application invite link.
     application_submitted_insured:
-        - riskNumber - risk number.
-        - insuredName - insured name.
+        - riskNumber - risk number
+        - insuredName - insured name
+     application_submitted_agent:
+        - riskStatus - risk status
+        - coverages - risk coverages
+        - userDetails - details, who submitted risk

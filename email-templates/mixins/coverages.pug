@@ -1,0 +1,14 @@
+include badge
+mixin coverages(coverages, price)
+    table(cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 24px; margin-bottom: 12px; height: 32px; padding: 0 16px; text-align: center; background-color: #F2F2F2; font-weight: 600; color: #1A1A1A; font-size: 0.875rem; border-radius: 8px")
+        td COVERAGES
+        if price
+             td(style="text-align: right") COVERAGE PREMIUM
+    each coverage in coverages
+        table(cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom: 8px;")
+            tr
+                td(style="font-size: 1rem; color: #1A1A1A;text-align: left; font-weight: 600") #{coverage.name}
+                td(align='right')
+                    +badge('Quote', coverage.quote, primaryColor, 'small')
+
+    
