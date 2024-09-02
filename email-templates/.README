@@ -17,6 +17,8 @@ variables:
     application_submitted_insured:
         - riskNumber - risk number.
         - insuredName - insured name.
+    program invite:
+        - applicationInviteLink - application invite link.
 
 
 frontend variables
