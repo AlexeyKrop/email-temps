@@ -1,8 +1,16 @@
-mixin badge(name = "Risk", riskNumber, color, width = '170px', height = '40px')
+mixin badge(name = "Risk", riskNumber, color, size = 'medium')
   include ../variables/variables.pug
-  div(style=`display: inline-block; border: 1px solid ${color || bsrPrimaryColor}; border-radius: 8px;width: ${width}; height: ${height}; ; line-height: ${height}; text-align: center;`)
-    span(style=`display: inline-block; width: 3px; height: 65%; background-color: ${color || bsrPrimaryColor}; vertical-align: middle; margin-left: -20px`)
-    span(style="color: #121414; font-size: 1rem; font-weight: 500; margin-left: 10px")
-      | #{name} #
-    span(style=`color: ${color || bsrPrimaryColor}; text-decoration: none; font-size: 1rem; font-weight: 700; margin-left: 2px;`)
-      | #{riskNumber}
+  - let sizes;
+  - sizes = {};
+  - sizes.small = { width: '134px', height: '24px', fontSize: '0.75rem'};
+  - sizes.medium = { width: '170px', height: '40px', fontSize: '1rem'};
+  - sizes.big = { width: '220px', height: '50px', fontSize: '1.25rem'};
+  - let selectedSize = sizes[size] || sizes['medium'];
+  table(cellpadding="0" cellspacing="0" border="0" style=`border: 1px solid ${color || bsrPrimaryColor}; border-radius: 8px;width: ${selectedSize.width}; height: ${selectedSize.height};text-align: left;border-collapse: initial`)
+    tr
+      td(style="height: 0")
+        span(style=`width: 3px; background-color: ${color || bsrPrimaryColor}; vertical-align: middle; display: inline-block; height: 65%; margin-right: 10px;margin-left: 7px;`)
+      td(style=`color: #121414; font-size: ${selectedSize.fontSize}; font-weight: 500; margin-left: 10px;`)
+        | #{name} #
+      td(style=`color: ${color || bsrPrimaryColor}; text-decoration: none; font-size: ${selectedSize.fontSize}; font-weight: 700;`)
+        | #{riskNumber}
