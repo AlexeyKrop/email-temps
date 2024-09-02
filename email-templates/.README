@@ -17,10 +17,13 @@ variables:
 
 
 frontend variables
+variables:
+    common:
+        - bsrPrimaryColor - "#E5B22C"
 mixins:
     button:
         - href - required link redirect, 
         - text - required, 
         - bgColor - optional(default bsrPrimaryColor), 
         - width - optional(default 100px), 
-        - color - optional(default fff)
+        - color - optional(default '#fff')
