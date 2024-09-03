@@ -14,11 +14,12 @@ variables:
         - verificationCode - code we display on verification screen
     application invite:
         - applicationInviteLink - application invite link.
+    program invite:
+        - programInviteLink - program invite link.
     application_submitted_insured:
+        - viewRiskLink - view risk link
         - riskNumber - risk number.
         - insuredName - insured name.
-    program invite:
-        - applicationInviteLink - application invite link.
 
 
 frontend variables
@@ -37,3 +38,6 @@ mixins:
         - riskNumber - required,
         - color - optional(default bsrPrimaryColor),
         - size - optional(default medium),
+    riskInfo:
+        - insuredName - optional insured name, 
+        - riskNumber - optional risk number
