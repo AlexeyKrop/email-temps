@@ -15,7 +15,15 @@ variables:
     application invite:
         - applicationInviteLink - application invite link.
     program invite:
-         - applicationInviteLink - application invite link.
+        - applicationInviteLink - application invite link.
+    application_submitted_insured:
+        - riskNumber - risk number
+        - insuredName - insured name
+    application_submitted_agent:
+        - viewRiskLink - link risk 
+        - riskStatus - risk status
+        - coverages - risk coverages
+        - userDetails - details, who submitted risk
 
 
 frontend variables
@@ -29,3 +37,8 @@ mixins:
         - bgColor - optional(default bsrPrimaryColor), 
         - width - optional(default 100px), 
         - color - optional(default '#fff')
+    badge:
+        - name - required(default "Risk"), 
+        - riskNumber - required,
+        - color - optional(default bsrPrimaryColor),
+        - size - optional(default medium),

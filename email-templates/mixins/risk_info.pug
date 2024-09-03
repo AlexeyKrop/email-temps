@@ -1,0 +1,10 @@
+include badge
+include user_details
+mixin riskInfo(insuredName, riskNumber)
+    table(cellpadding="0" cellspacing="0" border="0" width="100%")
+        tr
+            td(align="center" valign="middle")
+                p(style="font-size: 0.875rem; color: #757575; margin-top: 0; margin-bottom: 2px;") INSURED NAME
+                h2(style="margin: 0; padding: 0; font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; color: #1A1A1A;") #{insuredName}
+                +badge(_, riskNumber, primaryColor)
+                         

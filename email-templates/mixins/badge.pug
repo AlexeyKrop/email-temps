@@ -1,0 +1,16 @@
+mixin badge(name = "Risk", riskNumber, color, size = 'medium')
+  include ../variables/variables.pug
+  - let sizes;
+  - sizes = {};
+  - sizes.small = { width: '134px', height: '24px', fontSize: '0.75rem', lineGap: {left: '5px', right: '8px'}, lineWidth: '2px'};
+  - sizes.medium = { width: '170px', height: '40px', fontSize: '1rem',lineGap: {left: '7px', right: '10px'}, lineWidth: '3px'};
+  - sizes.big = { width: '220px', height: '50px', fontSize: '1.25rem', lineGap: {left: '7px', right: '10px'}, lineWidth: '3px'};
+  - let selectedSize = sizes[size] || sizes['medium'];
+  table(cellpadding="0" cellspacing="0" border="0" style=`border: 1px solid ${color || bsrPrimaryColor}; border-radius: 8px;width: ${selectedSize.width}; height: ${selectedSize.height};text-align: left;border-collapse: initial`)
+    tr
+      td(style="height: 0")
+        span(style=`width: ${selectedSize.lineWidth}; background-color: ${color || bsrPrimaryColor}; vertical-align: middle; display: inline-block; height: 65%; margin-right: ${selectedSize.lineGap.right};margin-left: ${selectedSize.lineGap.left};`)
+      td(style=`color: #121414; font-size: ${selectedSize.fontSize}; font-weight: 500;`)
+        | #{name} #
+      td(style=`color: ${color || bsrPrimaryColor}; text-decoration: none; font-size: ${selectedSize.fontSize}; font-weight: 700;`)
+        | #{riskNumber}
