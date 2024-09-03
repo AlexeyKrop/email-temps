@@ -78,6 +78,26 @@ const templates = [
       bannerLogo: "../assets/app_received_icon.png",
     },
   },
+  {
+    filename: "approved_risk",
+    templatePath: "./email-templates/approved_risk.pug",
+    templateData: {
+      applicationInviteLink: "https://pugjs.org/language/mixins.html",
+      riskNumber: "31254-042",
+      insuredName: "ABC Trucking",
+      riskStatus: "Ready to Review",
+      coverages: [
+        { name: "Auto Liability", quote: "A1184098", price: 14070.8 },
+        { name: "Motor Truck Package", quote: "M1127302", price: 23254.06 },
+      ],
+      userDetails: {
+        email: "jeremy_garfield@trucksecure.com",
+        phone: "(775) 691-5424",
+        effectiveDate: "July 31st, 2024",
+      },
+      bannerLogo: "../assets/app_received_icon.png",
+    },
+  },
 ];
 
 templates.forEach((template) => {
