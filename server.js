@@ -62,7 +62,7 @@ const templates = [
     filename: "application_submitted_agent",
     templatePath: "./email-templates/application_submitted_agent.pug",
     templateData: {
-      applicationInviteLink: "https://pugjs.org/language/mixins.html",
+      viewRiskLink: "https://pugjs.org/language/mixins.html",
       riskNumber: "31254-042",
       insuredName: "ABC Trucking",
       riskStatus: "Ready to Review",
@@ -75,7 +75,7 @@ const templates = [
         phone: "(775) 691-5424",
         effectiveDate: "July 31st, 2024",
       },
-      bannerLogo: "../assets/app_received_icon.png",
+      bannerLogo: "https://v3-staging-public.s3.amazonaws.com/media/ready_to_review.png",
     },
   },
   {

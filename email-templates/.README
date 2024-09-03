@@ -20,6 +20,7 @@ variables:
         - riskNumber - risk number
         - insuredName - insured name
     application_submitted_agent:
+        - viewRiskLink - link risk 
         - riskStatus - risk status
         - coverages - risk coverages
         - userDetails - details, who submitted risk

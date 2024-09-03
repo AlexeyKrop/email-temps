@@ -5,7 +5,7 @@ mixin coverages(coverages, showCoverageColumnPremium)
     - var dollars = Math.floor(price).toLocaleString('en-US')
     - var cents = ((price % 1).toFixed(2) + '').split('.')[1]
     table(cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 24px; margin-bottom: 16px; height: 32px; padding: 0 16px; text-align: center; background-color: #F2F2F2; font-weight: 600; color: #1A1A1A; font-size: 0.875rem; border-radius: 8px")
-        td(style=`text-align: ${showCoverageColumnPremium ? 'left' : 'center'}`) COVERAGE
+        td(style=`text-align: ${showCoverageColumnPremium ? 'left' : 'center'}`) COVERAGES
         if showCoverageColumnPremium
             td(style="text-align: right") COVERAGE PREMIUM
     each coverage, index in coverages

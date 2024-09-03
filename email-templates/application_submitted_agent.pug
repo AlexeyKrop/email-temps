@@ -5,7 +5,7 @@ block content
   include ./variables/variables.pug
   tr
      td
-        h2(style="padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") Application Received!
+        h2(style="padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin: 40px 0;") Application Received!
         +statusBanner(applicationReceivedBannerBackgroundColor, riskStatus, bannerLogo)
         p(style="padding: 0; font-size: 20px; line-height: 30px; margin-bottom: 40px; margin-top: 40px;") An application is now 
           span(style="font-weight: 600") #{riskStatus}
@@ -13,8 +13,9 @@ block content
           block widget_content
             +riskInfo(insuredName, riskNumber)
             if Object.keys(userDetails).length > 0
+              span(style=`display: block; height: 4px; background-color: ${primaryColor}; opacity: .3; margin-top: 24px;`)
               +userDetails(userDetails)
             if coverages.length > 0
               +coverages(coverages)
-        +button(applicationInviteLink, "View risk", primaryColor, "161px")
+        +button(viewRiskLink, "View risk", primaryColor, "161px")
   include layouts/footer
