@@ -1,15 +1,15 @@
-mixin badge(name = "Risk", riskNumber, color, size = 'medium')
+mixin badge(name = "Risk", riskNumber, size = 'medium')
   include ../variables/variables.pug
   - let sizes;
   - sizes = {};
   - sizes.small = {height: '24px', fontSize: '0.75rem', lineGap: {paddingLeft: '5px', paddingRight: '8px', marginRigth: '8px'}, lineWidth: '2px'};
   - sizes.medium = {height: '40px', fontSize: '1rem',lineGap: {paddingLeft: '7px', paddingRight: '12px', marginRigth: '10px'}, lineWidth: '3px'};
   - let selectedSize = sizes[size];
-  table(cellpadding="0" cellspacing="0" border="0" style=`border: 1px solid ${color || bsrPrimaryColor}; border-radius: 8px;padding-right: ${selectedSize.lineGap.paddingRight};padding-left: ${selectedSize.lineGap.paddingLeft};; height: ${selectedSize.height};text-align: left;border-collapse: initial`)
+  table(cellpadding="0" cellspacing="0" border="0" style=`border: 1px solid ${getPrimaryColor()}; border-radius: 8px;padding-right: ${selectedSize.lineGap.paddingRight};padding-left: ${selectedSize.lineGap.paddingLeft};; height: ${selectedSize.height};text-align: left;border-collapse: initial`)
     tr
       td(style="height: 0")
-        span(style=`width: 3px; background-color: ${color || bsrPrimaryColor}; vertical-align: middle; display: inline-block; height: 65%;; margin-right: ${selectedSize.lineGap.marginRigth}`)
+        span(style=`width: 3px; background-color:  ${getPrimaryColor()}; vertical-align: middle; display: inline-block; height: 65%;; margin-right: ${selectedSize.lineGap.marginRigth}`)
       td(style=`color: #121414; font-size: ${selectedSize.fontSize}; font-weight: 500`)
         | #{name} #
-      td(style=`color: ${color || bsrPrimaryColor}; text-decoration: none; font-size: ${selectedSize.fontSize}; font-weight: 700;`)
+      td(style=`color: ${getPrimaryColor()}; text-decoration: none; font-size: ${selectedSize.fontSize}; font-weight: 700;`)
         | #{riskNumber}
