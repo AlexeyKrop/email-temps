@@ -9,6 +9,8 @@ variables:
         - programCompanyName - name of program company
         - programCompanyAddress - address of program company
         - template - light or dark theme. possible options: with_margin / with_margin_light
+        - сompanyName - Refers to a distinct division within the overall program, focusing on a specialized area of expertise. For example, ISCA in One80 Intermediaries
+            Example: {сompanyName} has invited you to join the team. To gain access, please click the link below:
 
     verification code:
         - verificationCode - code we display on verification screen
@@ -27,23 +29,3 @@ variables:
         - coverages - risk coverages
         - userDetails - details, who submitted risk
 
-
-frontend variables
-variables:
-    common:
-        - bsrPrimaryColor - "#E5B22C"
-mixins:
-    button:
-        - href - required link redirect, 
-        - text - required, 
-        - bgColor - optional(default bsrPrimaryColor), 
-        - width - optional(default 100px), 
-        - color - optional(default '#fff')
-    badge:
-            - name - required(default "Risk"), 
-            - riskNumber - required,
-            - color - optional(default bsrPrimaryColor),
-            - size - optional(default medium),
-    riskInfo:
-            - insuredName - optional insured name, 
-            - riskNumber - optional risk number

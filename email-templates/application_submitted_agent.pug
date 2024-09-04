@@ -4,7 +4,6 @@ block content
   include layouts/header
   include ./variables/variables.pug
   tr
-     td
         h2(style="padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin: 40px 0;") Application Received!
         +statusBanner(applicationReceivedBannerBackgroundColor, riskStatus, bannerLogo)
         p(style="padding: 0; font-size: 20px; line-height: 30px; margin-bottom: 40px; margin-top: 40px;") An application is now 
@@ -17,5 +16,5 @@ block content
               +userDetails(userDetails)
             if coverages.length > 0
               +coverages(coverages)
-        +button(viewRiskLink, "View risk", primaryColor, "161px")
+        +button(viewRiskLink, "View risk")
   include layouts/footer

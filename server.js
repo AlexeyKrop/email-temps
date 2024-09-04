@@ -23,6 +23,7 @@ const commonConfig = {
   privacyPolicyLink: "https://client-portal.blackshieldrisk.com/privacy",
   blackShieldPromoLink: "https://www.blackshieldit.com",
   programCompanyName: "One80 Intermediaries",
+  сompanyName: "ICSA",
   programCompanyAddress: "1 Integrity Pkwy, Highland Heights, OH 44143",
   template: "with_margin_light",
 };
