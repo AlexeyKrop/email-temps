@@ -18,7 +18,7 @@ cleanOutputDirectory();
 const commonConfig = {
   bsrLogo: "https://v3-staging-public.s3.amazonaws.com/media/Blackshield.png",
   producerLogo: "https://v3-staging-public.s3.amazonaws.com/3/media/One80_logo.png",
-  // primaryColor: "#139FDA",
+  primaryColor: "#139FDA",
   termsOfUseLink: "https://client-portal.blackshieldrisk.com/terms",
   privacyPolicyLink: "https://client-portal.blackshieldrisk.com/privacy",
   blackShieldPromoLink: "https://www.blackshieldit.com",
