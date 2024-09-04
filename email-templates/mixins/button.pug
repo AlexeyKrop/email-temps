@@ -1,4 +1,4 @@
-mixin button(href, text, bgColor, width = '100px', color = '#ffffff')
+mixin button(href, text, color = '#ffffff')
   include ../variables/variables.pug
-  a(href=href target="_blank" style=`display: inline-block; background-color: ${bgColor || bsrPrimaryColor}; color: ${color}; width: ${width}; height: 48px; line-height: 48px; text-align: center; border-radius: 24px; font-size: 1.125rem; font-weight: 600; cursor: pointer; text-decoration: none;`)
+  a(href=href target="_blank" style=`display: inline-block; background-color: ${getPrimaryColor()}; color: ${color}; padding: 0 40px; height: 48px; line-height: 48px; text-align: center; border-radius: 24px; font-size: 1.125rem; font-weight: 600; cursor: pointer; text-decoration: none;`)
     | #{text}
