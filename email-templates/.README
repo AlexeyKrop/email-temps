@@ -9,6 +9,7 @@ variables:
         - programCompanyName - name of program company
         - programCompanyAddress - address of program company
         - template - light or dark theme. possible options: with_margin / with_margin_light
+        - с - Refers to a distinct division within the overall program, focusing on a specialized area of expertise.
 
     verification code:
         - verificationCode - code we display on verification screen
@@ -16,16 +17,3 @@ variables:
         - applicationInviteLink - application invite link.
     program invite:
          - applicationInviteLink - application invite link.
-
-
-frontend variables
-variables:
-    common:
-        - bsrPrimaryColor - "#E5B22C"
-mixins:
-    button:
-        - href - required link redirect, 
-        - text - required, 
-        - bgColor - optional(default bsrPrimaryColor), 
-        - width - optional(default 100px), 
-        - color - optional(default '#fff')
