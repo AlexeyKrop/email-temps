@@ -5,10 +5,10 @@ block content
   tr
      td(style="height: auto; background-color: #ffffff; padding: 40px; vertical-align: top;")
             h2(style="margin: 0; padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") Application Received!
-            p(style="margin: 0; padding: 0; font-size: 20px; line-height: 30px; margin-bottom: 40px;") Thank you for submitting your application.
-            p(style="margin: 0; padding: 0; font-size: 20px; line-height: 30px; margin-bottom: 40px;") We are reviewing and we will contact you if we have any questions.
+            p(style="margin: 0; padding: 0; font-size: 1.25rem; line-height: 1.875rem; margin-bottom: 32px;") Thank you for submitting your application.
+            p(style="margin: 0; padding: 0; font-size: 1.25rem; line-height: 1.875rem; margin-bottom: 40px;") We are reviewing and we will contact you if we have any questions.
             include layouts/widget
               block widget_content
                 +riskInfo(insuredName, riskNumber)
-            +button(applicationInviteLink, "View risk", primaryColor, "161px")
+            +button(viewRiskLink, "View risk", primaryColor, "161px")
   include layouts/footer

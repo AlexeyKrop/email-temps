@@ -46,14 +46,14 @@ const templates = [
     filename: "program_invite",
     templatePath: "./email-templates/program_invite.pug",
     templateData: {
-      applicationInviteLink: "https://pugjs.org/language/mixins.html",
+      programInviteLink: "https://pugjs.org/language/mixins.html",
     },
   },
   {
     filename: "application_submitted_insured",
     templatePath: "./email-templates/application_submitted_insured.pug",
     templateData: {
-      applicationInviteLink: "https://pugjs.org/language/mixins.html",
+      viewRiskLink: "https://pugjs.org/language/mixins.html",
       riskNumber: "31254-042",
       insuredName: "ABC Trucking",
     },

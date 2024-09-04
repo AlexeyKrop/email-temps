@@ -1,13 +1,13 @@
 include badge
 mixin coverages(coverages, showCoverageColumnPremium)
-    - const tdCoverageNameStyle = "font-size: 1rem; color: #1A1A1A; text-align: left; font-weight: 600"
+    - const tdCoverageNameStyle = "font-size: 1rem; color: #1A1A1A; text-align: left; font-weight: 600; width: 50%"
     - var price = 14070.8
     - var dollars = Math.floor(price).toLocaleString('en-US')
     - var cents = ((price % 1).toFixed(2) + '').split('.')[1]
-    table(cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 24px; margin-bottom: 16px; height: 32px; padding: 0 16px; text-align: center; background-color: #F2F2F2; font-weight: 600; color: #1A1A1A; font-size: 0.875rem; border-radius: 8px")
-        td(style=`text-align: ${showCoverageColumnPremium ? 'left' : 'center'}`) COVERAGES
+    table(cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 24px; margin-bottom: 16px; height: 32px;text-align: center; background-color: #F2F2F2; font-weight: 600; color: #1A1A1A; font-size: 0.875rem; border-radius: 8px")
+        td(style=`text-align: ${showCoverageColumnPremium ? 'left' : 'center'}; padding-left: 16px;`) COVERAGES
         if showCoverageColumnPremium
-            td(style="text-align: right") COVERAGE PREMIUM
+            td(style="text-align: right; padding-right: 16px;") COVERAGE PREMIUM
     each coverage, index in coverages
         table(cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom: 8px")
             tr
@@ -15,8 +15,8 @@ mixin coverages(coverages, showCoverageColumnPremium)
                     td(style=tdCoverageNameStyle) 
                         span(style="display: inline-block; margin-bottom: 8px")  #{coverage.name}
                         +badge('Quote', coverage.quote, primaryColor, 'small')
-                    td(align='left') $#{dollars} 
-                        sup #{cents}
+                    td(align='center' style="font-weight: 700;font-size: 1.25rem") $#{dollars}. 
+                        sup(style="font-weight: 700;font-size: 1rem") #{cents}
                 else
                     td(style=tdCoverageNameStyle) #{coverage.name}
                     td(align='right')

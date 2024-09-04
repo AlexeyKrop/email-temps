@@ -15,10 +15,12 @@ variables:
     application invite:
         - applicationInviteLink - application invite link.
     program invite:
-        - applicationInviteLink - application invite link.
+        - programInviteLink - program invite link.
+
     application_submitted_insured:
-        - riskNumber - risk number
-        - insuredName - insured name
+        - viewRiskLink - view risk link
+        - riskNumber - risk number.
+        - insuredName - insured name.
     application_submitted_agent:
         - viewRiskLink - link risk 
         - riskStatus - risk status
@@ -38,7 +40,10 @@ mixins:
         - width - optional(default 100px), 
         - color - optional(default '#fff')
     badge:
-        - name - required(default "Risk"), 
-        - riskNumber - required,
-        - color - optional(default bsrPrimaryColor),
-        - size - optional(default medium),
+            - name - required(default "Risk"), 
+            - riskNumber - required,
+            - color - optional(default bsrPrimaryColor),
+            - size - optional(default medium),
+    riskInfo:
+            - insuredName - optional insured name, 
+            - riskNumber - optional risk number
