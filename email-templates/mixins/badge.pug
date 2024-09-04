@@ -12,4 +12,4 @@ mixin badge(name = "Risk", riskNumber, size = 'medium')
       td(style=`color: #121414; font-size: ${selectedSize.fontSize}; font-weight: 500`)
         | #{name} #
       td(style=`color: ${getPrimaryColor()}; text-decoration: none; font-size: ${selectedSize.fontSize}; font-weight: 700;`)
-        | #{riskNumber}
+        span(style='margin-left: 2px') #{riskNumber}
