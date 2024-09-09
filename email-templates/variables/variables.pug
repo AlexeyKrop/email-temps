@@ -1,5 +1,26 @@
 - var bsrPrimaryColor = "#E5B22C";
 - var applicationReceivedBannerBackgroundColor = "#FFF8EC";
-- var getPrimaryColor = function(){
--    return primaryColor || bsrPrimaryColor
--   }
+- var applicationApproveddBannerBackgroundColor = "#ECF8F1";
+- 
+  var getPrimaryColor = function(){
+    return primaryColor || bsrPrimaryColor
+ }
+
+-
+  var formatPrice = function(price) {
+    if (price === undefined || price === null) {
+      return {
+        formattedDollars: '0',
+        cents: '00'
+      };
+    }
+
+    var fixedPrice = price.toFixed(2);
+    var parts = fixedPrice.split('.');
+    var dollars = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    var cents = parts[1];
+    return {
+      dollars,
+      cents
+    };
+  }

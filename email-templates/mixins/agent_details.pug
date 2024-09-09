@@ -1,12 +1,13 @@
-mixin userDetails(userDetails = {})
-    if Object.keys(userDetails).length > 0 || coverages.length > 0
+mixin agentDetails(agentDetails = {})
+    if Object.keys(agentDetails).length > 0 || coverages.length > 0
         table(style="border-collapse: collapse; margin-top: 24px; width: 100%")
             tr(style="height: 40px; border-bottom: 1px solid rgba(26, 26, 26, .1); vertical-align: middle")
                 td(style="color: #2A2A2A; font-size: 0.875rem; text-align: left;") Email address:
-                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{userDetails.email}
+                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600")
+                    a(href=`mailto:${agentDetails.email}` target="_blank" style=`color: #1A1A1A; text-decoration: none;`) #{agentDetails.email}
             tr(style="height: 40px; border-bottom: 1px solid rgba(26, 26, 26, .1); vertical-align: middle")
                 td(style="color: #2A2A2A; font-size: 0.875rem; text-align: left;") Phone number:
-                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{userDetails.phone}
+                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{agentDetails.phone}
             tr(style="height: 40px; vertical-align: middle")
                 td(style="color: #2A2A2A; font-size: 0.875rem; margin-bottom: 25px; text-align: left;") Requested effective date:
-                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{userDetails.effectiveDate}
+                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{agentDetails.effectiveDate}

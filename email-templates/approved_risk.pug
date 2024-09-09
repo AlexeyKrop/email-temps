@@ -4,17 +4,16 @@ block content
   include layouts/header
   include ./variables/variables.pug
   tr
-     td
-        h2(style="padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") Application Received!
-        +statusBanner(applicationReceivedBannerBackgroundColor, riskStatus, bannerLogo)
-        p(style="padding: 0; font-size: 20px; line-height: 30px; margin-bottom: 40px; margin-top: 40px;") An application is now 
-          span(style="font-weight: 600") #{riskStatus}
+    td(style="height: auto; background-color: #ffffff; padding: 40px 40px 64px; vertical-align: top;")
+        h2(style="padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") Your risk has been approved!
+        +statusBanner(applicationApproveddBannerBackgroundColor, riskStatus, bannerLogo)
         include layouts/widget
           block widget_content
             +riskInfo(insuredName, riskNumber)
-            if Object.keys(userDetails).length > 0
-              +userDetails(userDetails)
+            if Object.keys(agentDetails).length > 0
+              span(style=`display: block; height: 4px; background-color: ${getPrimaryColor()}; opacity: .3; margin-top: 24px;`)
+              +agentDetails(agentDetails)
             if coverages.length > 0
               +coverages(coverages, true)
-        +button(applicationInviteLink, "View risk", primaryColor, "161px")
+        +button(viewQuoteLink, "View my quote")
   include layouts/footer

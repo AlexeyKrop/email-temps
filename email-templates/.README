@@ -27,5 +27,29 @@ variables:
         - viewRiskLink - link risk 
         - riskStatus - risk status
         - coverages - risk coverages
-        - userDetails - details, who submitted risk
+            Example: coverages: [
+                { name: "Auto Liability", quote: "A1184098" },
+                { name: "Motor Truck Package", quote: "M1127302" },
+            ],
+        - agentDetails - details, who submitted risk 
+            Example: agentDetails: {
+                        email: "jeremy_garfield@trucksecure.com",
+                        phone: "(775) 691-5424",
+                        effectiveDate: "July 31st, 2024",
+                    },
+     approved_risk:
+        - viewQuoteLink - link quot 
+        - riskStatus - risk status
+        - coverages - risk coverages
+            Example: coverages: [
+            { name: "Auto Liability", quote: "A1184098", price: 14070.8 },
+            { name: "Motor Truck Package", quote: "M1127302", price: 23254.06 },
+            { name: "Motor Truck Package", quote: "M11273022", price: 23254 },
+        ],
+        - agentDetails - details, who submitted risk 
+            Example: agentDetails: {
+                        email: "jeremy_garfield@trucksecure.com",
+                        phone: "(775) 691-5424",
+                        effectiveDate: "July 31st, 2024",
+                    },
 
