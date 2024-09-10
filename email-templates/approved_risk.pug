@@ -6,7 +6,7 @@ block content
   tr
     td(style="height: auto; background-color: #ffffff; padding: 40px 40px 64px; vertical-align: top;")
         h2(style="padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") Your risk has been approved!
-        +statusBanner(applicationApproveddBannerBackgroundColor, riskStatus, bannerLogo)
+        +statusBanner(getStatusBannerBackgroundColor(riskStatus), getStatusLabel(riskStatus), bannerLogo)
         include layouts/widget
           block widget_content
             +riskInfo(insuredName, riskNumber)

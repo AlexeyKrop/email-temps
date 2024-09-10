@@ -66,7 +66,7 @@ const templates = [
       viewRiskLink: "https://pugjs.org/language/mixins.html",
       riskNumber: "31254-042",
       insuredName: "ABC Trucking",
-      riskStatus: "Ready to Review",
+      riskStatus: "READY_TO_REVIEW",
       coverages: [
         { name: "Auto Liability", quote: "A1184098" },
         { name: "Motor Truck Package", quote: "M1127302" },
@@ -86,7 +86,7 @@ const templates = [
       viewQuoteLink: "https://pugjs.org/language/mixins.html",
       riskNumber: "31254-042",
       insuredName: "ABC Trucking",
-      riskStatus: "Approved",
+      riskStatus: "APPROVED",
       coverages: [
         { name: "Auto Liability", quote: "A1184098", price: 14070.8 },
         { name: "Motor Truck Package", quote: "M1127302", price: 23254.06 },

@@ -1,7 +1,8 @@
 - var bsrPrimaryColor = "#E5B22C";
 - var applicationReceivedBannerBackgroundColor = "#FFF8EC";
-- var applicationApproveddBannerBackgroundColor = "#ECF8F1";
-- 
+- var applicationApprovedBannerBackgroundColor = "#ECF8F1";
+
+-
   var getPrimaryColor = function(){
     return primaryColor || bsrPrimaryColor
  }
@@ -9,10 +10,7 @@
 -
   var formatPrice = function(price) {
     if (price === undefined || price === null) {
-      return {
-        formattedDollars: '0',
-        cents: '00'
-      };
+      return null
     }
 
     var fixedPrice = price.toFixed(2);
@@ -23,4 +21,28 @@
       dollars,
       cents
     };
+  }
+
+-
+  var getStatusBannerBackgroundColor = function(status) {
+      switch (status) {
+          case 'READY_TO_REVIEW':
+              return applicationReceivedBannerBackgroundColor;
+          case 'APPROVED':
+              return applicationApprovedBannerBackgroundColor;
+          default:
+              return "#FFFFFF"; 
+      }
+  }
+
+-
+  var getStatusLabel = function(status) {
+      switch (status) {
+          case 'READY_TO_REVIEW':
+              return 'Ready to Review';
+          case 'APPROVED':
+              return 'Approved';
+          default:
+              return status;
+      }
   }

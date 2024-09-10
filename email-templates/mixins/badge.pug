@@ -2,10 +2,10 @@ mixin badge(name = "Risk", riskNumber, size = 'medium')
   include ../variables/variables.pug
   - let sizes;
   - sizes = {};
-  - sizes.small = {height: '24px', fontSize: '0.75rem', lineGap: {paddingLeft: '5px', paddingRight: '8px', marginRight: '8px'}, lineWidth: '2px'};
-  - sizes.medium = {height: '40px', fontSize: '1rem',lineGap: {paddingLeft: '7px', paddingRight: '12px', marginRight: '10px'}, lineWidth: '3px'};
+  - sizes.small = {height: '24px', lineHeight: '16.8px', fontSize: '0.75rem', lineGap: {paddingLeft: '5px', paddingRight: '8px', marginRight: '8px'}, lineWidth: '2px', borderRadius: '4px'};
+  - sizes.medium = {height: '40px', lineHeight: '22.4px',fontSize: '1rem',lineGap: {paddingLeft: '7px', paddingRight: '12px', marginRight: '10px'}, lineWidth: '3px', borderRadius: '8px'};
   - let selectedSize = sizes[size];
-  table(cellpadding="0" cellspacing="0" border="0" style=`border: 1px solid ${getPrimaryColor()}; border-radius: 8px;padding-right: ${selectedSize.lineGap.paddingRight};padding-left: ${selectedSize.lineGap.paddingLeft};; height: ${selectedSize.height};text-align: left;border-collapse: initial`)
+  table(cellpadding="0" cellspacing="0" border="0" style=`border: 1px solid ${getPrimaryColor()}; border-radius: ${selectedSize.borderRadius};padding-right: ${selectedSize.lineGap.paddingRight};padding-left: ${selectedSize.lineGap.paddingLeft}; height: ${selectedSize.height};text-align: left;border-collapse: initial; line-height:  ${selectedSize.lineHeight}`)
     tr
       td(style="height: 0")
         span(style=`width: ${selectedSize.lineWidth}; background-color:  ${getPrimaryColor()}; vertical-align: middle; display: inline-block; height: 65%;; margin-right: ${selectedSize.lineGap.marginRight}`)
