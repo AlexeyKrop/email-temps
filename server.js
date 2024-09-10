@@ -71,7 +71,7 @@ const templates = [
         { name: "Auto Liability", quote: "A1184098" },
         { name: "Motor Truck Package", quote: "M1127302" },
       ],
-      agentDetails: {
+      insuredDetails: {
         email: "jeremy_garfield@trucksecure.com",
         phone: "(775) 691-5424",
         effectiveDate: "July 31st, 2024",
@@ -92,7 +92,7 @@ const templates = [
         { name: "Motor Truck Package", quote: "M1127302", price: 23254.06 },
         { name: "Motor Truck Package", quote: "M11273022", price: 23254 },
       ],
-      agentDetails: {
+      insuredDetails: {
         email: "jeremy_garfield@trucksecure.com",
         phone: "(775) 691-5424",
         effectiveDate: "July 31st, 2024",

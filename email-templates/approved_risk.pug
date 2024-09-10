@@ -10,9 +10,9 @@ block content
         include layouts/widget
           block widget_content
             +riskInfo(insuredName, riskNumber)
-            if Object.keys(agentDetails).length > 0
+            if Object.keys(insuredDetails).length > 0
               span(style=`display: block; height: 4px; background-color: ${getPrimaryColor()}; opacity: .3; margin-top: 24px;`)
-              +agentDetails(agentDetails)
+              +insuredDetails(insuredDetails)
             if coverages.length > 0
               +coverages(coverages, true)
         +button(viewQuoteLink, "View my quote")
