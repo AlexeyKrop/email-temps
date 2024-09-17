@@ -16,6 +16,7 @@ variables:
         - verificationCode - code we display on verification screen
     application invite:
         - applicationInviteLink - application invite link.
+        - message - invite message
     program invite:
         - programInviteLink - program invite link.
 

@@ -41,6 +41,8 @@ const templates = [
     templatePath: "./email-templates/application_invite.pug",
     templateData: {
       applicationInviteLink: "https://www.unisender.com/ru/blog/kak-sverstat-pismo-instruktsiya-dlya-chaynikov/",
+      message:
+        "This is a message placeholder. Lorem ipsum dolor sit amet consectetur. Convallis quis urna nisl sed sagittis ultrices. Quam ultricies sagittis cursus nec id tellus.",
     },
   },
   {
