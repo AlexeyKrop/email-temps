@@ -1,15 +1,19 @@
 mixin insuredDetails(insuredDetails = {})
     include ../variables/variables.pug
     if Object.keys(insuredDetails).length > 0 || coverages.length > 0
+        - const details = []
+        - details.push({ label: 'Email address:', value: insuredDetails.email, isLink: true })
+        - details.push({ label: 'Phone number:', value: insuredDetails.phone })
+        if insuredDetails.effectiveDate
+            - const effectiveDate = getFullDate(insuredDetails.effectiveDate)
+            - details.push({ label: 'Requested effective date:', value: effectiveDate })
+
         table(style="border-collapse: collapse; margin-top: 24px; width: 100%")
-            tr(style="height: 40px; border-bottom: 1px solid rgba(26, 26, 26, .1); vertical-align: middle")
-                td(style="color: #2A2A2A; font-size: 0.875rem; text-align: left;") Email address:
-                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600")
-                    a(href=`mailto:${insuredDetails.email}` target="_blank" style=`color: #1A1A1A; text-decoration: none;`) #{insuredDetails.email}
-            tr(style="height: 40px; border-bottom: 1px solid rgba(26, 26, 26, .1); vertical-align: middle")
-                td(style="color: #2A2A2A; font-size: 0.875rem; text-align: left;") Phone number:
-                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{insuredDetails.phone}
-            tr(style="height: 40px; vertical-align: middle")
-                td(style="color: #2A2A2A; font-size: 0.875rem; margin-bottom: 25px; text-align: left;") Requested effective date:
-                - const effectiveDate = getFullDate(insuredDetails.effectiveDate)
-                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{effectiveDate}
+            each detail, index in details
+                tr(style=`height: 40px; vertical-align: middle${index !== details.length - 1 ? '; border-bottom: 1px solid rgba(26, 26, 26, .1)' : ''}`)
+                    td(style="color: #2A2A2A; font-size: 0.875rem; text-align: left;")= detail.label
+                    td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600")
+                        if detail.isLink
+                            a(href=`mailto:${detail.value}` target="_blank" style="color: #1A1A1A; text-decoration: none;")= detail.value
+                        else
+                            = detail.value
