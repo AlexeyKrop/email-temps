@@ -1,4 +1,5 @@
 mixin insuredDetails(insuredDetails = {})
+    include ../variables/variables.pug
     if Object.keys(insuredDetails).length > 0 || coverages.length > 0
         table(style="border-collapse: collapse; margin-top: 24px; width: 100%")
             tr(style="height: 40px; border-bottom: 1px solid rgba(26, 26, 26, .1); vertical-align: middle")
@@ -10,4 +11,5 @@ mixin insuredDetails(insuredDetails = {})
                 td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{insuredDetails.phone}
             tr(style="height: 40px; vertical-align: middle")
                 td(style="color: #2A2A2A; font-size: 0.875rem; margin-bottom: 25px; text-align: left;") Requested effective date:
-                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{insuredDetails.effectiveDate}
+                - const effectiveDate = getFullDate(insuredDetails.effectiveDate)
+                td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600") #{effectiveDate}

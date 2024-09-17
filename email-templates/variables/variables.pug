@@ -46,3 +46,25 @@
               return status;
       }
   }
+
+-
+  var getFullDate = function (inputDate) {
+      const months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+
+      const date = new Date(inputDate)
+
+      const monthName = months[date.getMonth()];
+      const day = date.getDate();
+      const year = date.getFullYear();
+
+      let ordinalSuffix = 'th'
+      if(day%10 === 1) ordinalSuffix = 'st'
+      if(day%10 === 2) ordinalSuffix = 'nd'
+      if(day%10 === 3) ordinalSuffix = 'rd'
+      if (day >= 11 && day <= 13) ordinalSuffix = 'th'
+
+      return `${monthName} ${day}${ordinalSuffix}, ${year}`;
+  }
