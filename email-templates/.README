@@ -37,7 +37,7 @@ variables:
             Example: insuredDetails: {
                         email: "jeremy_garfield@trucksecure.com",
                         phone: "(775) 691-5424",
-                        effectiveDate: "July 31st, 2024",
+                        effectiveDate: "2024-07-31",
                     },
         - bannerLogo - icon in banner near status risk
      approved_risk:
@@ -56,6 +56,6 @@ variables:
             Example: insuredDetails: {
                         email: "jeremy_garfield@trucksecure.com",
                         phone: "(775) 691-5424",
-                        effectiveDate: "July 31st, 2024",
+                        effectiveDate: "2024-07-31",
                     },
 

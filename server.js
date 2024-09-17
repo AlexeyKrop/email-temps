@@ -74,7 +74,7 @@ const templates = [
       insuredDetails: {
         email: "jeremy_garfield@trucksecure.com",
         phone: "(775) 691-5424",
-        effectiveDate: "July 31st, 2024",
+        effectiveDate: "2024-07-31",
       },
       bannerLogo: "https://v3-staging-public.s3.amazonaws.com/media/ready_to_review.png",
     },
@@ -95,7 +95,7 @@ const templates = [
       insuredDetails: {
         email: "jeremy_garfield@trucksecure.com",
         phone: "(775) 691-5424",
-        effectiveDate: "July 31st, 2024",
+        effectiveDate: "2024-07-31",
       },
       bannerLogo: "https://v3-staging-public.s3.amazonaws.com/media/approved.png",
     },
