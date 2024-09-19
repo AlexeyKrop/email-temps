@@ -24,8 +24,9 @@ variables:
         - viewRiskLink - view risk link
         - riskNumber - risk number.
         - insuredName - insured name.
-    application_submitted_agent:
-        - viewRiskLink - link risk 
+    application_submitted_underwriter:
+        - reviewRiskLink - review link risk 
+        - contactInsuredLink - contact insured link
         - riskStatus - risk status 
             Example: READY_TO_REVIEW
         - insuredName - insured name.
@@ -53,6 +54,20 @@ variables:
             { name: "Motor Truck Package", quote: "M11273022", price: 23254 },
         ],
         - bannerLogo - icon in banner near status risk
+        - insuredDetails - details, who submitted risk 
+            Example: insuredDetails: {
+                        email: "jeremy_garfield@trucksecure.com",
+                        phone: "(775) 691-5424",
+                        effectiveDate: "2024-07-31",
+                    },
+    application_submitted_agent:
+        - viewRiskLink - view link risk 
+        - insuredName - insured name.
+        - coverages - risk coverages
+            Example: coverages: [
+                { name: "Auto Liability", quote: "A1184098" },
+                { name: "Motor Truck Package", quote: "M1127302" },
+            ],
         - insuredDetails - details, who submitted risk 
             Example: insuredDetails: {
                         email: "jeremy_garfield@trucksecure.com",

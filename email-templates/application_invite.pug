@@ -7,7 +7,7 @@ block content
      td(style="height: auto; background-color: #ffffff; padding: 40px 40px 64px; vertical-align: top;")
             h2(style="margin: 0; padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") Let's get started!
             p(style="margin: 0; padding: 0; font-size: 20px; line-height: 30px; margin-bottom: 40px;") #{programCompanyName} has sent you an application. Please click the link below to log in and to get started.
-            div(style=`margin-bottom: 40px; padding: 24px; background-color: ${template === 'with_margin_light' ? '#F2F2F2' : '#202124'}; font-size: 1rem; font-weight: 600; color: #000000; border-radius: 24px`)
+            div(style=`margin-bottom: 40px; padding: 24px; background-color: ${template === 'with_margin_light' ? '#F2F2F2' : '#202124'}; font-size: 1rem; font-weight: 600; color: #000000; border-radius: 24px; font-style: italic`)
               span #{message}
             +button(applicationInviteLink, "Take me to the application")
   include layouts/footer

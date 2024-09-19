@@ -62,10 +62,11 @@ const templates = [
     },
   },
   {
-    filename: "application_submitted_agent",
-    templatePath: "./email-templates/application_submitted_agent.pug",
+    filename: "application_submitted_underwriter",
+    templatePath: "./email-templates/application_submitted_underwriter.pug",
     templateData: {
-      viewRiskLink: "https://pugjs.org/language/mixins.html",
+      reviewRiskLink: "https://pugjs.org/language/mixins.html",
+      contactInsuredLink: "https://pugjs.org/language/mixins.html",
       riskNumber: "31254-042",
       insuredName: "ABC Trucking",
       riskStatus: "READY_TO_REVIEW",
@@ -100,6 +101,24 @@ const templates = [
         effectiveDate: "2024-07-31",
       },
       bannerLogo: "https://v3-staging-public.s3.amazonaws.com/media/approved.png",
+    },
+  },
+  {
+    filename: "application_submitted_agent",
+    templatePath: "./email-templates/application_submitted_agent.pug",
+    templateData: {
+      viewRiskLink: "https://pugjs.org/language/mixins.html",
+      riskNumber: "31254-042",
+      insuredName: "ABC Trucking",
+      coverages: [
+        { name: "Auto Liability", quote: "A1184098" },
+        { name: "Motor Truck Package", quote: "M1127302" },
+      ],
+      insuredDetails: {
+        email: "jeremy_garfield@trucksecure.com",
+        phone: "(775) 691-5424",
+        effectiveDate: "2024-07-31",
+      },
     },
   },
 ];
