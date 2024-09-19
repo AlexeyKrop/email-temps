@@ -121,6 +121,13 @@ const templates = [
       },
     },
   },
+  {
+    filename: "quote_is_ready_sign",
+    templatePath: "./email-templates/quote_is_ready_sign.pug",
+    templateData: {
+      viewFormalQuoteLink: "https://pugjs.org/language/mixins.html",
+    },
+  },
 ];
 
 templates.forEach((template) => {

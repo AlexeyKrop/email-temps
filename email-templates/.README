@@ -74,4 +74,6 @@ variables:
                         phone: "(775) 691-5424",
                         effectiveDate: "2024-07-31",
                     },
+    quote is ready sign:
+        - viewFormalQuoteLink - view Formal Quote Link
 
