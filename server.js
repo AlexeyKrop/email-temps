@@ -128,6 +128,17 @@ const templates = [
     templatePath: "./email-templates/quote_is_ready_sign.pug",
     templateData: {
       viewFormalQuoteLink: "https://pugjs.org/language/mixins.html",
+      insuredDetails: {
+        email: "jeremy_garfield@trucksecure.com",
+        phone: "(775) 691-5424",
+        effectiveDate: "2024-07-31",
+      },
+      riskNumber: "31254-042",
+      coverages: [
+        { name: "Auto Liability", quote: "A1184098", price: 23254.06 },
+        { name: "Motor Truck Package", quote: "M1127302", price: 14070.8 },
+      ],
+      insuredName: "ABC Trucking",
     },
   },
 ];
