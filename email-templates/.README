@@ -19,7 +19,6 @@ variables:
         - message - invite message
     program invite:
         - programInviteLink - program invite link.
-
     application_submitted_insured:
         - viewRiskLink - view risk link
         - riskNumber - risk number.
@@ -60,6 +59,7 @@ variables:
                         phone: "(775) 691-5424",
                         effectiveDate: "2024-07-31",
                     },
+        - approvedRiskMessage - approved risk message
     application_submitted_agent:
         - viewRiskLink - view link risk 
         - insuredName - insured name.

@@ -101,6 +101,8 @@ const templates = [
         effectiveDate: "2024-07-31",
       },
       bannerLogo: "https://v3-staging-public.s3.amazonaws.com/media/approved.png",
+      approvedRiskMessage:
+        "This is a message placeholder. Lorem ipsum dolor sit amet consectetur. Convallis quis urna nisl sed sagittis ultrices.Quam ultricies sagittis cursus nec id tellus.",
     },
   },
   {

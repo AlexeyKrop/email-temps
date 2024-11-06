@@ -7,12 +7,14 @@ block content
     td(style="height: auto; background-color: #ffffff; padding: 40px 40px 64px; vertical-align: top;")
         h2(style="padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") Your risk has been approved!
         +statusBanner(getStatusBannerBackgroundColor(riskStatus), getStatusLabel(riskStatus), bannerLogo)
+        div(style=`margin-bottom: 40px; padding: 24px; background-color: ${template === 'with_margin_light' ? '#F2F2F2' : '#202124'}; font-size: 1rem; font-weight: 600; color: #000000; border-radius: 24px; font-style: italic`)
+          span #{approvedRiskMessage}
         include layouts/widget
           block widget_content
             +riskInfo(insuredName, riskNumber)
             if Object.keys(insuredDetails).length > 0
               span(style=`display: block; height: 4px; background-color: ${getPrimaryColor()}; opacity: .3; margin-top: 24px;`)
-              +insuredDetails(insuredDetails)
+              +insuredDetails(insuredDetails, riskStatus)
             if coverages.length > 0
               +coverages(coverages, true)
         +button(viewQuoteLink, "View my quote")

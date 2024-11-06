@@ -74,3 +74,12 @@
 
       return `${monthName} ${day}${ordinalSuffix}, ${year}`;
   }
+-
+  var getDateLabel = function(status) {
+      switch (status) {
+          case 'APPROVED':
+              return 'Effective Date';
+          default:
+              return 'Requested effective date:';
+      }
+  }

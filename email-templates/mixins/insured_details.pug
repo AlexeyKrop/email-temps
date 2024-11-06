@@ -1,4 +1,4 @@
-mixin insuredDetails(insuredDetails = {})
+mixin insuredDetails(insuredDetails = {}, riskStatus)
     include ../variables/variables.pug
     if Object.keys(insuredDetails).length > 0 || coverages.length > 0
         - const details = []
@@ -6,7 +6,8 @@ mixin insuredDetails(insuredDetails = {})
         - details.push({ label: 'Phone number:', value: insuredDetails.phone })
         if insuredDetails.effectiveDate
             - const effectiveDate = getFullDate(insuredDetails.effectiveDate)
-            - details.push({ label: 'Requested effective date:', value: effectiveDate })
+            - const dateLabel = getDateLabel(riskStatus)
+            - details.push({ label: dateLabel, value: effectiveDate })
 
         table(style="border-collapse: collapse; margin-top: 24px; width: 100%")
             each detail, index in details
