@@ -8,7 +8,7 @@ mixin badge(name = "Risk", riskNumber, size = 'medium')
   table(cellpadding="0" cellspacing="0" border="0" style=`border: 1px solid ${getPrimaryColor()}; border-radius: ${selectedSize.borderRadius};padding-right: ${selectedSize.lineGap.paddingRight};padding-left: ${selectedSize.lineGap.paddingLeft}; height: ${selectedSize.height};text-align: left;border-collapse: initial; line-height:  ${selectedSize.lineHeight}`)
     tr
       td(style="height: 0")
-        span(style=`width: ${selectedSize.lineWidth}; background-color:  ${getPrimaryColor()}; vertical-align: middle; display: inline-block; height: 65%;; margin-right: ${selectedSize.lineGap.marginRight}`)
+        span(style=`width: ${selectedSize.lineWidth}; background-color:  ${getPrimaryColor()}; vertical-align: middle; display: inline-block; height: 65%; margin-right: ${selectedSize.lineGap.marginRight}`)
       td(style=`color: #121414; font-size: ${selectedSize.fontSize}; font-weight: 500`)
         | #{name} #
       td(style=`color: ${getPrimaryColor()}; text-decoration: none; font-size: ${selectedSize.fontSize}; font-weight: 700;`)
