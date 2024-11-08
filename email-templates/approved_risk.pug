@@ -5,7 +5,7 @@ block content
   include ./variables/variables.pug
   tr
     td(style="height: auto; background-color: #ffffff; padding: 40px 40px 64px; vertical-align: top;")
-        h2(style="padding: 0; font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") Your risk has been approved!
+        +mainTitle("Your risk has been approved!")
         +statusBanner(getStatusBannerBackgroundColor(riskStatus), getStatusLabel(riskStatus), bannerLogo)
         div(style=`margin-bottom: 40px; padding: 24px; background-color: ${template === 'with_margin_light' ? '#F2F2F2' : '#202124'}; font-size: 1rem; font-weight: 600; color: #000000; border-radius: 24px; font-style: italic`)
           span #{approvedRiskMessage}

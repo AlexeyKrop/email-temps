@@ -5,7 +5,7 @@ block content
   include ./variables/variables.pug
   tr
      td(style="height: auto; background-color: #ffffff; padding: 40px 40px 64px; vertical-align: top;")
-            h2(style="margin: 0;font-size: 2rem; line-height: 3rem; font-weight: 700; margin-bottom: 40px;") A formal quote from #{programCompanyName} is awaiting your signature.
+            +mainTitle(`A formal quote from ${programCompanyName} is awaiting your signature.`)
             include layouts/widget
               block widget_content
                 +riskInfo(insuredName, riskNumber)
