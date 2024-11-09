@@ -139,6 +139,7 @@ const templates = [
         { name: "Motor Truck Package", quote: "M1127302", price: 14070.8 },
       ],
       insuredName: "ABC Trucking",
+      riskStatus: "APPROVED",
     },
   },
 ];

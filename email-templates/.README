@@ -89,5 +89,6 @@ variables:
             { name: "Motor Truck Package", quote: "M11273022", price: 23254 },
         ],
         - riskNumber - risk number
-        - insuredName - insured name.
+        - insuredName - insured name
+        - riskStatus - risk status
 
