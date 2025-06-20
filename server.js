@@ -147,7 +147,7 @@ const templates = [
     templatePath: "./email-templates/program_assignment.pug",
     templateData: {
       companyName: "One80 Intermediaries",
-      newProgram: "ICSA 2",
+      programName: "ICSA 2",
       programLink: "https://client-portal-dev.blackshieldrisk.com?program=program_code",
     },
   },
