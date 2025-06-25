@@ -151,6 +151,17 @@ const templates = [
       programLink: "https://client-portal-dev.blackshieldrisk.com?program=program_code",
     },
   },
+  {
+    filename: "program_assignment_to_company",
+    templatePath: "./email-templates/program_assignment_to_company.pug",
+    templateData: {
+      companyName: "One80 Intermediaries",
+      programName: "ICSA",
+      userName: "Morgan McMillan",
+      inviteLink: "https://client-portal-dev.blackshieldrisk.com?company_invite=company_invite_key",
+      programRole: "Manager",
+    },
+  },
 ];
 
 templates.forEach((template) => {
