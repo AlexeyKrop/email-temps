@@ -7,11 +7,8 @@ block content
   tr
     td(style="height: auto; background-color: #ffffff; padding: 40px 40px 64px; vertical-align: top;")
       +mainTitle(title)
-      p(style="margin: 0;font-size: 20px; line-height: 30px; margin-bottom: 24px;")
-        | You were invited by #{userName} to create a Blackshield account and join #{companyName}.
-      p(style="margin: 0;font-size: 20px; line-height: 30px; margin-bottom: 24px;")
-        | Upon creating your account, you will have the #{programRole} role in the #{programName} program.
-      p(style="margin: 0;font-size: 20px; line-height: 30px; margin-bottom: 40px;")
-        | Click the button below to accept this invite and create your account.
+      p(style="margin: 0;font-size: 20px; line-height: 30px; margin-bottom: 24px;") You were invited by #{userName} to create a Blackshield account and join #{companyName}.
+      p(style="margin: 0;font-size: 20px; line-height: 30px; margin-bottom: 24px;") Upon creating your account, you will have the #{programRole} role in the #{programName} program.
+      p(style="margin: 0;font-size: 20px; line-height: 30px; margin-bottom: 40px;") Click the button below to accept this invite and create your account.
       +button(inviteLink, "Create account")
   include layouts/footer
