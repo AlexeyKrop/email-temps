@@ -158,7 +158,7 @@ const templates = [
       companyName: "One80 Intermediaries",
       programName: "ICSA",
       userName: "Morgan McMillan",
-      inviteLink: "http://localhost:9001/create_company?company_invite=company_invite_key",
+      inviteLink: "https://client-portal-dev.blackshieldrisk.com/signup?company_invite=company_invite_key",
       programRole: "Manager",
     },
   },
