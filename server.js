@@ -157,7 +157,7 @@ const templates = [
     templateData: {
       companyName: "One80 Intermediaries",
       programName: "ICSA",
-      userName: "Morgan McMillan",
+      userName: "Hexel Colorado",
       inviteLink: "https://client-portal-dev.blackshieldrisk.com/signup?company_invite=company_invite_key",
       programRole: "Manager",
     },
