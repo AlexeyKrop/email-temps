@@ -41,13 +41,125 @@ const templates = [
     templatePath: "./email-templates/application_invite.pug",
     templateData: {
       applicationInviteLink: "https://www.unisender.com/ru/blog/kak-sverstat-pismo-instruktsiya-dlya-chaynikov/",
+      message:
+        "This is a message placeholder. Lorem ipsum dolor sit amet consectetur. Convallis quis urna nisl sed sagittis ultrices. Quam ultricies sagittis cursus nec id tellus.",
     },
   },
   {
     filename: "program_invite",
     templatePath: "./email-templates/program_invite.pug",
     templateData: {
-      applicationInviteLink: "https://pugjs.org/language/mixins.html",
+      programInviteLink: "https://pugjs.org/language/mixins.html",
+    },
+  },
+  {
+    filename: "application_submitted_insured",
+    templatePath: "./email-templates/application_submitted_insured.pug",
+    templateData: {
+      viewRiskLink: "https://pugjs.org/language/mixins.html",
+      riskNumber: "31254-042",
+      insuredName: "ABC Trucking",
+    },
+  },
+  {
+    filename: "application_submitted_underwriter",
+    templatePath: "./email-templates/application_submitted_underwriter.pug",
+    templateData: {
+      reviewRiskLink: "https://pugjs.org/language/mixins.html",
+      contactInsuredLink: "https://pugjs.org/language/mixins.html",
+      riskNumber: "31254-042",
+      insuredName: "ABC Trucking",
+      riskStatus: "READY_TO_REVIEW",
+      coverages: [
+        { name: "Auto Liability", quote: "A1184098" },
+        { name: "Motor Truck Package", quote: "M1127302" },
+      ],
+      insuredDetails: {
+        email: "jeremy_garfield@trucksecure.com",
+        phone: "(775) 691-5424",
+        effectiveDate: "2024-07-31",
+      },
+      bannerLogo: "https://v3-staging-public.s3.amazonaws.com/media/ready_to_review.png",
+    },
+  },
+  {
+    filename: "approved_risk",
+    templatePath: "./email-templates/approved_risk.pug",
+    templateData: {
+      viewQuoteLink: "https://pugjs.org/language/mixins.html",
+      riskNumber: "31254-042",
+      insuredName: "ABC Trucking",
+      riskStatus: "APPROVED",
+      coverages: [
+        { name: "Auto Liability", quote: "A1184098", price: 14070.8 },
+        { name: "Motor Truck Package", quote: "M1127302", price: 23254.06 },
+        { name: "Motor Truck Package", quote: "M11273022", price: 23254 },
+      ],
+      insuredDetails: {
+        email: "jeremy_garfield@trucksecure.com",
+        phone: "(775) 691-5424",
+        effectiveDate: "2024-07-31",
+      },
+      bannerLogo: "https://v3-staging-public.s3.amazonaws.com/media/approved.png",
+      approvedRiskMessage:
+        "This is a message placeholder. Lorem ipsum dolor sit amet consectetur. Convallis quis urna nisl sed sagittis ultrices.Quam ultricies sagittis cursus nec id tellus.",
+    },
+  },
+  {
+    filename: "application_submitted_agent",
+    templatePath: "./email-templates/application_submitted_agent.pug",
+    templateData: {
+      viewRiskLink: "https://pugjs.org/language/mixins.html",
+      riskNumber: "31254-042",
+      insuredName: "ABC Trucking",
+      coverages: [
+        { name: "Auto Liability", quote: "A1184098" },
+        { name: "Motor Truck Package", quote: "M1127302" },
+      ],
+      insuredDetails: {
+        email: "jeremy_garfield@trucksecure.com",
+        phone: "(775) 691-5424",
+        effectiveDate: "2024-07-31",
+      },
+    },
+  },
+  {
+    filename: "quote_is_ready_sign",
+    templatePath: "./email-templates/quote_is_ready_sign.pug",
+    templateData: {
+      viewFormalQuoteLink: "https://pugjs.org/language/mixins.html",
+      insuredDetails: {
+        email: "jeremy_garfield@trucksecure.com",
+        phone: "(775) 691-5424",
+        effectiveDate: "2024-07-31",
+      },
+      riskNumber: "31254-042",
+      coverages: [
+        { name: "Auto Liability", quote: "A1184098", price: 23254.06 },
+        { name: "Motor Truck Package", quote: "M1127302", price: 14070.8 },
+      ],
+      insuredName: "ABC Trucking",
+      riskStatus: "APPROVED",
+    },
+  },
+  {
+    filename: "program_assignment",
+    templatePath: "./email-templates/program_assignment.pug",
+    templateData: {
+      companyName: "One80 Intermediaries",
+      programName: "ICSA 2",
+      programLink: "https://client-portal-dev.blackshieldrisk.com?program=program_code",
+    },
+  },
+  {
+    filename: "program_assignment_to_company",
+    templatePath: "./email-templates/program_assignment_to_company.pug",
+    templateData: {
+      companyName: "One80 Intermediaries",
+      programName: "ICSA",
+      userName: "Hexel Colorado",
+      inviteLink: "https://client-portal-dev.blackshieldrisk.com/signup?company_invite=company_invite_key",
+      programRole: "Manager",
     },
   },
 ];

@@ -1,0 +1,26 @@
+extends layouts/base
+include ./mixins/index.pug
+block content
+  include layouts/header
+  include ./variables/variables.pug
+  tr
+     td(style="height: auto; background-color: #ffffff; padding: 40px 40px 64px; vertical-align: top;")
+        +mainTitle("Application Received!")
+        +statusBanner(getStatusBannerBackgroundColor(riskStatus), getStatusLabel(riskStatus), bannerLogo)
+        p(style="padding: 0; font-size: 1.25rem; line-height: 1.875rem; margin-bottom: 40px; margin-top: 40px;") An application is now 
+          span(style="font-weight: 600") #{getStatusLabel(riskStatus)}
+        include layouts/widget
+          block widget_content
+            +riskInfo(insuredName, riskNumber)
+            if Object.keys(insuredDetails).length > 0
+              - const { effectiveDate, ...filteredDetails } = insuredDetails;
+              span(style=`display: block; height: 4px; background-color: ${getPrimaryColor()}; opacity: .3; margin-top: 24px;`)
+              +insuredDetails(filteredDetails)
+            if coverages.length > 0
+              +coverages(coverages, _, insuredDetails.effectiveDate)
+        table(style="width: 100%")
+          td(style="text-align: left;width: 248px")
+            +button(reviewRiskLink, "Review now", _, _, true)
+          td(style="text-align: right; width: 248px")
+            +button(contactInsuredLink, "Contact Insured", _, true, true)
+  include layouts/footer

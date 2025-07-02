@@ -1,0 +1,20 @@
+mixin insuredDetails(insuredDetails = {}, riskStatus)
+    include ../variables/variables.pug
+    if Object.keys(insuredDetails).length > 0 || coverages.length > 0
+        - const details = []
+        - details.push({ label: 'Email address:', value: insuredDetails.email, isLink: true })
+        - details.push({ label: 'Phone number:', value: insuredDetails.phone })
+        if insuredDetails.effectiveDate
+            - const effectiveDate = getFullDate(insuredDetails.effectiveDate)
+            - const dateLabel = getDateLabel(riskStatus)
+            - details.push({ label: dateLabel, value: effectiveDate })
+
+        table(style="border-collapse: collapse; margin-top: 24px; width: 100%")
+            each detail, index in details
+                tr(style=`height: 40px; vertical-align: middle${index !== details.length - 1 ? '; border-bottom: 1px solid rgba(26, 26, 26, .1)' : ''}`)
+                    td(style="color: #2A2A2A; font-size: 0.875rem; text-align: left;")= detail.label
+                    td(style="text-align: end; color: #1A1A1A; font-size: 0.875rem; font-weight: 600")
+                        if detail.isLink
+                            a(href=`mailto:${detail.value}` target="_blank" style="color: #1A1A1A; text-decoration: none;")= detail.value
+                        else
+                            = detail.value

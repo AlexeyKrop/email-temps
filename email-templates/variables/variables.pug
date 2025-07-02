@@ -1,5 +1,85 @@
 - var bsrPrimaryColor = "#E5B22C";
-- var getPrimaryColor = function(){
--    return primaryColor || bsrPrimaryColor
--   }
+- var bsrReverseColor = "#2A2A2A";
+- var applicationReceivedBannerBackgroundColor = "#FFF8EC";
+- var applicationApprovedBannerBackgroundColor = "#ECF8F1";
 
+-
+  var getPrimaryColor = function(){
+    return primaryColor || bsrPrimaryColor
+ }
+
+-
+  var getReverseColor = function(){
+    return bsrReverseColor
+ }
+
+-
+  var formatPrice = function(price) {
+    if (price === undefined || price === null) {
+      return null
+    }
+
+    var fixedPrice = price.toFixed(2);
+    var parts = fixedPrice.split('.');
+    var dollars = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    var cents = parts[1];
+    return {
+      dollars,
+      cents
+    };
+  }
+
+-
+  var getStatusBannerBackgroundColor = function(status) {
+      switch (status) {
+          case 'READY_TO_REVIEW':
+              return applicationReceivedBannerBackgroundColor;
+          case 'APPROVED':
+              return applicationApprovedBannerBackgroundColor;
+          default:
+              return "#FFFFFF"; 
+      }
+  }
+
+-
+  var getStatusLabel = function(status) {
+      switch (status) {
+          case 'READY_TO_REVIEW':
+              return 'Ready to Review';
+          case 'APPROVED':
+              return 'Approved';
+          default:
+              return status;
+      }
+  }
+
+-
+  var getFullDate = function (inputDate) {
+      const months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+
+      const date = new Date(inputDate)
+
+      const monthName = months[date.getMonth()];
+      const day = date.getDate();
+      const year = date.getFullYear();
+
+      let ordinalSuffix = 'th'
+      if(day%10 === 1) ordinalSuffix = 'st'
+      if(day%10 === 2) ordinalSuffix = 'nd'
+      if(day%10 === 3) ordinalSuffix = 'rd'
+      if (day >= 11 && day <= 13) ordinalSuffix = 'th'
+
+      return `${monthName} ${day}${ordinalSuffix}, ${year}`;
+  }
+-
+  var getDateLabel = function(status) {
+      switch (status) {
+          case 'APPROVED':
+              return 'Effective Date';
+          default:
+              return 'Requested effective date:';
+      }
+  }
